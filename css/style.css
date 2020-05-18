@@ -443,7 +443,6 @@ div:focus {
   background-color: rgba(0, 0, 0, 0.4);
   -ms-touch-action: none;
       touch-action: none;
-  pointer-events: none;
 }
 
 figure {
