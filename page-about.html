@@ -34,46 +34,82 @@
                 <div class="header__mobile__nav">
                   <ul>
                     <li>
-                      <a href="/html/about.html">О проекте</a>
+                      <a href="#">О проекте</a>
                     </li>
                     <li>
                       <a class="drop_item-mob" href="#">Тематические смены</a>
                       <div class="drop_downmenu-mob">
                         <ul>
-                          <li><a href="/html/artek.html">Артек</a></li>
-                          <li><a href="/html/orlenok.html">Орленок</a></li>
-                          <li><a href="/html/ocean.html">Океан</a></li>
+                          <li><a href="#">Артек</a></li>
+                          <li><a href="#">Орленок</a></li>
+                          <li><a href="#">Океан</a></li>
                         </ul>
                       </div>
                     </li>
-                    <li><a href="/html/parents.html">Родителям</a></li>
-                    <li><a href="/html/media.html">Медиа</a></li>
-                    <li><a href="/html/contacts.html">Контакты</a></li>
+                    <li><a href="#">Родителям</a></li>
+                    <li>
+                      <a href="#">Медиа</a>
+                      <div class="drop_downmenu-mob">
+                        <ul>
+                          <li><a href="#">Новости</a></li>
+                          <li><a href="#">Фотоархив</a></li>
+                          <li><a href="#">Видеоархив</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#">Профориентирование</a>
+                      <div class="drop_downmenu-mob">
+                        <ul>
+                          <li><a href="#">Морские профессии</a></li>
+                          <li><a href="#">Учебные заведения</a></li>
+                          <li><a href="#">Морские династии</a></li>
+                          <li><a href="#">Словарь морских терминов</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li><a href="#">Контакты</a></li>
                   </ul>
                 </div>
               </div>
               <div class="header__desktop">
                 <ul>
                   <li>
-                    <a href="/html/about.html">О проекте</a>
+                    <a href="#">О проекте</a>
                   </li>
-
                   <li class="dropdown_item-desk">
-                    <a href="#"
-                      >Тематические смены<i class="fas fa-chevron-down"></i
-                    ></a>
+                    <a href="#">Тематические смены</a>
                     <div class="drop_downmenu-desk">
                       <ul>
-                        <li><a href="/html/artek.html">Артек</a></li>
-                        <li><a href="/html/orlenok.html">Орленок</a></li>
-                        <li><a href="/html/ocean.html">Океан</a></li>
+                        <li><a href="#">Артек</a></li>
+                        <li><a href="#">Орленок</a></li>
+                        <li><a href="#">Океан</a></li>
                       </ul>
                     </div>
                   </li>
-
-                  <li><a href="/html/parents.html">Родителям</a></li>
-                  <li><a href="/html/media.html">Медиа</a></li>
-                  <li><a href="/html/contacts.html">Контакты</a></li>
+                  <li><a href="#">Родителям</a></li>
+                  <li class="dropdown_item-desk">
+                    <a href="#">Медиа</a>
+                    <div class="drop_downmenu-desk">
+                      <ul>
+                        <li><a href="#">Новости</a></li>
+                        <li><a href="#">фотоархив</a></li>
+                        <li><a href="#">Видеоархив</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown_item-desk">
+                    <a href="#">Профориентирование</a>
+                    <div class="drop_downmenu-desk">
+                      <ul>
+                        <li><a href="#">Морские профессии</a></li>
+                        <li><a href="#">Учебные заведения</a></li>
+                        <li><a href="#">Морские династии</a></li>
+                        <li><a href="#">Словарь морских терминов</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li><a href="#">Контакты</a></li>
                 </ul>
               </div>
             </div>
@@ -82,7 +118,7 @@
       </div>
     </header>
 
-    <section class="about-main about-main-artek">
+    <section class="about-main" data-bg="img/page-about/bg.png">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -100,19 +136,22 @@
       <div class="centre__list">
         <ul>
           <li>
-            <a class="centre__list-item active" id="artek" href="/artek.html"
+            <a class="centre__list-item active" href="#"
               >Международный детский центр «Артек»</a
             >
           </li>
           <li>
-            <a class="centre__list-item" id="orlenok" href="/orlenok.html"
-              >Всероссийский детский центр «Орленок»</a
+            <a class="centre__list-item" href="#"
+              >Всероссийский детский центр «Орлёнок»</a
             >
           </li>
           <li>
-            <a class="centre__list-item" id="ocean" href="/ocean.html"
+            <a class="centre__list-item" href="#"
               >Всероссийский детский центр «Океан»</a
             >
+          </li>
+          <li>
+            <a class="centre__list-item" href="#">Фонд социальных инвестиций</a>
           </li>
         </ul>
       </div>
@@ -169,13 +208,39 @@
       </div>
     </section>
 
+    <div class="mailing">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="mailing__block">
+              <div class="subscription">
+                <div class="img">
+                  <img src="img/footer/icon.png" alt="" />
+                </div>
+                <p>Подпишитесь на рассылку</p>
+              </div>
+              <div class="course">
+                <p>Будьте в кусре всех новостей</p>
+              </div>
+              <div class="form">
+                <form action="">
+                  <input type="email" placeholder="Введите e-mail" />
+                  <button type="submit">Подписаться</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer class="footer">
       <div class="container">
         <div class="row">
           <div class="col-12">
             <div class="footer__logo">
-              <a href="/html/index.html">
-                <img src="img/footer/logo.svg" alt="" />
+              <a href="#">
+                <img src="img/footer/logo.png" alt="" />
               </a>
             </div>
           </div>
@@ -190,11 +255,11 @@
               <div class="map">
                 <p>Карта сайта</p>
                 <ul>
-                  <li><a href="/html/about.html">О проекте</a></li>
+                  <li><a href="#">О проекте</a></li>
                   <li><a href="#">Тематические смены</a></li>
-                  <li><a href="/html/parents.html">Родителям</a></li>
-                  <li><a href="/html/media.html">Медиа</a></li>
-                  <li><a href="/html/contacts.html">Контакты</a></li>
+                  <li><a href="#">Родителям</a></li>
+                  <li><a href="#">Медиа</a></li>
+                  <li><a href="#">Контакты</a></li>
                 </ul>
               </div>
               <div class="help">

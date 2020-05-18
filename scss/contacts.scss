@@ -1,138 +1,95 @@
-@keyframes textFaq {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .contacts {
-  margin-bottom: 50px;
-  &__content {
-    & .info {
+  margin-bottom: 30px;
+  @media (min-width: 992px) {
+    margin-bottom: 50px;
+  }
+  &__info {
+    margin-top: 30px;
+    @media (min-width: 992px) {
+      margin-top: 60px;
+    }
+    &-main {
       display: flex;
       flex-direction: column;
-      margin-top: 20px;
-      @media (min-width: 992px) {
-        flex-direction: row;
-        margin-bottom: 40px;
-        justify-content: space-between;
+      justify-content: center;
+      margin-bottom: 30px;
+      @media (min-width: 576px) {
+        justify-content: flex-start;
+        align-items: flex-start;
       }
-    }
-    & span {
-      font-family: "MullerBold";
-      font-size: 18px;
-      line-height: 18px;
-      color: #1c1c1c;
-      margin-top: 20px;
-      display: block;
-      & a {
+      @media (min-width: 992px) {
+        margin-bottom: 80px;
+      }
+      & .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (min-width: 576px) {
+          flex-direction: row;
+        }
+        & .img-fond {
+          width: 100px;
+          height: 50px;
+          & img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        & .link {
+          margin-top: 20px;
+          font-family: "MullerBold";
+          font-size: 16px;
+          line-height: 18px;
+          text-decoration-line: underline;
+          color: rgba(29, 96, 152, 0.6);
+          @media (min-width: 576px) {
+            margin-left: 20px;
+          }
+        }
+      }
+      & span {
         font-family: "MullerBold";
         font-size: 18px;
         line-height: 18px;
+        text-align: center;
         color: #1c1c1c;
+        margin-top: 20px;
+        @media (min-width: 576px) {
+          text-align: left;
+        }
+        @media (min-width: 992px) {
+          margin-top: 30px;
+        }
       }
-    }
-    & p {
-      font-family: "MullerUltraLight";
-      font-size: 18px;
-      line-height: 18px;
-      color: #000000;
-      margin-top: 10px;
-      @media (min-width: 992px) {
-        margin-top: 36px;
-      }
-    }
-  }
-  &__item {
-    background: #fafafa;
-    display: inline-block;
-    margin-top: 30px;
-    cursor: pointer;
-    position: relative;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 10px 0px 10px 10px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
-    @media (min-width: 992px) {
-      padding: 28px 0px 28px 20px;
-    }
-    & h4 {
-      font-family: "MullerBold";
-      font-size: 18px;
-      line-height: 24px;
-      color: #1c1c1c;
-      width: 85%;
-      @media (min-width: 576px) {
-        width: 90%;
-      }
-    }
-    & p {
-      font-family: "MullerRegular";
-      font-size: 16px;
-      line-height: 24px;
-      color: #000000;
-      display: none;
-      animation-name: textFaq;
-      animation-duration: 0.5s;
-      animation-timing-function: ease-out;
-      width: 90%;
-    }
-    & button {
-      position: absolute;
-      top: 30px;
-      right: 10px;
-      width: 15px;
-      height: 15px;
-      background-color: transparent;
-      border: none;
-      @media (min-width: 992px) {
-        top: 40px;
-        right: 20px;
-      }
-      &:before,
-      &:after {
-        content: "";
-        position: absolute;
-        background-color: #00b7c6;
-        transition: transform 0.25s ease-out;
-      }
-      &:before {
-        top: 0;
-        left: 50%;
-        width: 4px;
-        height: 100%;
-        margin-left: -2px;
-      }
-      &:after {
-        top: 50%;
-        left: 0;
-        width: 100%;
-        height: 4px;
-        margin-top: -2px;
-      }
-    }
-  }
-}
-
-.contacts {
-  &__item {
-    &.active {
       & p {
-        display: block;
-      }
-      & button {
-        &:before {
-          transform: rotate(90deg);
-        }
-        &:after {
-          transform: rotate(180deg);
+        font-family: "MullerUltraLight";
+        font-size: 18px;
+        line-height: 18px;
+        color: #000000;
+        text-align: center;
+        margin-top: 20px;
+        @media (min-width: 992px) {
+          margin-top: 30px;
         }
       }
     }
   }
 }
-
+.contacts__footer {
+  font-family: "MullerBold";
+  font-size: 18px;
+  line-height: 24px;
+  color: #1c1c1c;
+  margin-top: 20px;
+  @media (min-width: 992px) {
+    margin-top: 40px;
+  }
+  & a {
+    font-size: 18px;
+    line-height: 24px;
+    color: #1c1c1c;
+  }
+}
 .contacts__faq-title {
   font-family: "MullerBold";
   text-transform: none;

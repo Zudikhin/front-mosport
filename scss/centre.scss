@@ -4,7 +4,7 @@
     display: flex;
   }
   &__list {
-    background-color: #00b7c6;
+    background: linear-gradient(180deg, #00b7c6 0%, #1d6098 100%);
     padding: 20px 20px;
     box-sizing: border-box;
     @media (min-width: 576px) {
@@ -38,11 +38,11 @@
             content: "";
             position: absolute;
             top: 0;
-            right: -28px;
-            background-image: url(../img/centre/ship.png);
+            right: -38px;
+            background-image: url(../img/small-icon-ship.png);
             background-size: 100% 100%;
-            width: 22px;
-            height: 15px;
+            width: 28px;
+            height: 20px;
             display: none;
           }
           &.active {

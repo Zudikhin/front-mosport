@@ -14,6 +14,19 @@ $(document).ready(function () {
     }
   });
 
+  $(".about-main").each(function () {
+    if ($(this).attr("data-bg")) {
+      $(this).css({
+        background:
+          "linear-gradient(0deg, rgba(51, 51, 51, 0.6), rgba(51, 51, 51, 0.6)), url(" +
+          $(this).data("bg") +
+          ")",
+        "background-repeat": "no-repeat",
+        "background-size": "100% 100%",
+      });
+    }
+  });
+
   $(".dropdown_item-desk").hover(function () {
     $(this).toggleClass("active");
     $(this).children().toggleClass("active");
@@ -131,6 +144,10 @@ $(document).ready(function () {
         false
       );
     }
+  });
+
+  $(".faq__item").click(function () {
+    $(this).toggleClass("active");
   });
 
   // $(".main__slider").onAfterChange:function (slide, index) {
@@ -378,20 +395,8 @@ $(document).ready(function () {
           $(this).data("bg") +
           ")",
         "background-repeat": "no-repeat",
-        "background-size": "100% 100%",
-      });
-    }
-  });
-
-  $(".about-main").each(function () {
-    if ($(this).attr("data-bg")) {
-      $(this).css({
-        background:
-          "linear-gradient(0deg, rgba(51, 51, 51, 0.6), rgba(51, 51, 51, 0.6)), url(" +
-          $(this).data("bg") +
-          ")",
-        "background-repeat": "no-repeat",
-        "background-size": "100% 100%",
+        "background-size": "cover",
+        "background-position": "50%, 50%",
       });
     }
   });
@@ -411,7 +416,7 @@ $(document).ready(function () {
 
   $(".other-news__content h4").each(function () {
     var defaultText = $(this)[0].innerHTML;
-    if (defaultText.length > 40) {
+    if (defaultText.length > 30) {
       var shortText =
         $.trim(defaultText).substring(0, 30).split(" ").slice(0, -1).join(" ") +
         "...";
