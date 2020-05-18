@@ -267,7 +267,8 @@
       & .line {
         display: flex;
         & p {
-          transform: translateY(17px);
+          margin: 0px;
+          transform: translateY(27px);
           margin-left: 5px;
         }
       }

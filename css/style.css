@@ -4069,8 +4069,9 @@ figure {
 }
 
 .shift__info .separate .left .line p {
-  -webkit-transform: translateY(17px);
-          transform: translateY(17px);
+  margin: 0px;
+  -webkit-transform: translateY(27px);
+          transform: translateY(27px);
   margin-left: 5px;
 }
 
