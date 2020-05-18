@@ -8,9 +8,11 @@ $(document).ready(function () {
     if ($(".header__mobile__nav").hasClass("active")) {
       $(".header__fake-modal").css("display", "block");
       $("body").css("overflow", "hidden");
+      $("body").css("touch-action", "none");
     } else {
       $(".header__fake-modal").css("display", "none");
       $("body").css("overflow", "auto");
+      $("body").css("touch-action", "auto");
     }
   });
 
@@ -48,20 +50,6 @@ $(document).ready(function () {
     }
   });
 
-  var swiper = new Swiper(".swiper-friends", {
-    direction: "vertical",
-    slidesPerView: "auto",
-    mousewheel: true,
-    freeMode: true,
-    scrollbar: {
-      el: ".swiper-scrollbar",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      type: "progressbar",
-    },
-  });
-
   $(".reviews__for_content").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -88,21 +76,6 @@ $(document).ready(function () {
 
   $(".review__btn-prev").click(function () {
     $(".reviews__for_content").slick("slickPrev");
-  });
-
-  swiper.on("slideChange", function () {
-    var dropProgress = $(this)[0].progress;
-    var progress = dropProgress * 100;
-    if (progress < 20) {
-      $(".bar").css("width", 20 + "%");
-      $("#friends_ship").css("left", 10 + "%");
-    } else if (progress > 89) {
-      $(".bar").css("width", 100 + "%");
-      $("#friends_ship").css("left", 90 + "%");
-    } else {
-      $(".bar").css("width", progress + "%");
-      $("#friends_ship").css("left", progress - 10 + "%");
-    }
   });
 
   $(".main__item").each(function () {
@@ -162,6 +135,7 @@ $(document).ready(function () {
     $(".header__mobile__nav").removeClass("active");
     $(".header__mobile__btn").removeClass("active");
     $("body").css("overflow", "auto");
+    $("body").css("touch-action", "auto");
   });
 
   $(".news__slider").slick({
