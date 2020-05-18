@@ -1,0 +1,99 @@
+.mailing {
+  background-color: #00b7c6;
+  box-sizing: border-box;
+  padding: 20px 0px;
+  @media (min-width: 1200px) {
+    padding: 55px 0px;
+  }
+}
+.mailing__block {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 1200px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  & .subscription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & p {
+      font-family: "MullerMedium";
+      font-size: 18px;
+      line-height: 18px;
+      color: #ffffff;
+      @media (min-width: 768px) {
+        font-size: 24px;
+        line-height: 24px;
+      }
+    }
+  }
+  & .course {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    @media (min-width: 1200px) {
+      margin-top: 0px;
+    }
+    & p {
+      font-family: "MullerRegular";
+      font-size: 16px;
+      line-height: 24px;
+      color: #ffffff;
+      @media (min-width: 1200px) {
+        transform: translateY(0px);
+      }
+    }
+  }
+  & .form {
+    margin: 20px 0px;
+    display: flex;
+    justify-content: center;
+    @media (min-width: 1200px) {
+      margin: 0px;
+    }
+    & form {
+      & input {
+        background-color: white;
+        border: none;
+        width: 200px;
+        height: 40px;
+        padding-left: 15px;
+        border-radius: 5px 0px 0px 5px;
+        transform: translateY(-1.5px);
+        &::placeholder {
+          font-family: "MullerRegular";
+          font-size: 16px;
+          line-height: 40px;
+          color: #737373;
+        }
+        @media (min-width: 768px) {
+          width: 318px;
+          height: 50px;
+          &::placeholder {
+            line-height: 50px;
+            font-size: 20px;
+          }
+        }
+      }
+      & button {
+        background-color: #1d6098;
+        border: none;
+        width: 120px;
+        height: 40px;
+        transform: translateX(-6px);
+        font-family: "MullerRegular";
+        font-size: 16px;
+        line-height: 14px;
+        color: #ffffff;
+        border-radius: 0px 5px 5px 0px;
+        @media (min-width: 768px) {
+          width: 186px;
+          height: 50px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

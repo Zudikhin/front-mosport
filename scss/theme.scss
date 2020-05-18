@@ -1,0 +1,139 @@
+.theme {
+  margin-top: 30px;
+  @media (min-width: 768px) {
+    margin-top: 50px;
+  }
+  & .item {
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 40px;
+    @media (min-width: 374px) {
+      width: 340px;
+    }
+    @media (min-width: 576px) {
+      width: 370px;
+    }
+    &-first {
+      & .theme__img {
+        &:before {
+          background-color: #fc8cb4;
+        }
+      }
+    }
+    &-second {
+      @media (min-width: 1200px) {
+        transform: translateX(10px);
+      }
+      & .theme__img {
+        &:before {
+          background-color: #009db0;
+        }
+      }
+    }
+    &-third {
+      @media (min-width: 1200px) {
+        transform: translateX(20px);
+      }
+      & .theme__img {
+        &:before {
+          background-color: #8d65ff;
+        }
+      }
+    }
+    & .name {
+      display: flex;
+      flex-direction: column;
+      margin-top: 32px;
+      & .first {
+        font-family: "MullerMedium";
+        font-size: 16px;
+        line-height: 16px;
+        color: #333333;
+      }
+      & .last {
+        color: black;
+        font-size: 18px;
+        margin-top: 6px;
+      }
+    }
+    & .theme__img {
+      height: 260px;
+      position: relative;
+      margin: 0 auto;
+      width: 300px;
+      &:before {
+        content: "";
+        position: absolute;
+        left: -10px;
+        bottom: -10px;
+        width: 100%;
+        height: 230px;
+        z-index: -1;
+      }
+      @media (min-width: 374px) {
+        width: 340px;
+      }
+      @media (min-width: 576px) {
+        width: 370px;
+        height: 250px;
+      }
+      & img {
+        width: 100%;
+        height: 100%;
+      }
+      & p {
+        font-size: 16px;
+        line-height: 16px;
+        text-align: center;
+        color: #ffffff;
+        position: absolute;
+        top: 45%;
+        transform: translateY(-50%);
+        padding: 0px 17px;
+        left: 10px;
+      }
+      & .info {
+        position: absolute;
+        background-color: white;
+        bottom: -10px;
+        right: -10px;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 12px 15px;
+        & .change {
+          font-size: 12px;
+          line-height: 12px;
+          color: #1c1c1c;
+        }
+        & .date {
+          font-family: "MullerMedium";
+          font-size: 16px;
+          line-height: 12px;
+          color: #1c1c1c;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+.theme {
+  & .item {
+    & .text {
+      opacity: 1;
+      @media (min-width: 992px) {
+        opacity: 0;
+      }
+    }
+    &:hover {
+      & .text {
+        opacity: 1;
+        animation-name: slideBlock;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-out;
+      }
+    }
+  }
+}
