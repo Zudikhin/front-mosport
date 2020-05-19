@@ -297,78 +297,6 @@ $(document).ready(function () {
     },
   });
 
-  var swiperDesk = [];
-
-  $(".swiper-dynasty-desk").each(function (index) {
-    var mySwiperDesk = new Swiper($(this)[0], {
-      direction: "vertical",
-      slidesPerView: "auto",
-      mousewheel: true,
-      freeMode: true,
-      scrollbar: {
-        el: ".swiper-scrollbar",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        type: "progressbar",
-      },
-    });
-    swiperDesk.push(mySwiperDesk);
-  });
-
-  $.each(swiperDesk, function (index, value) {
-    value.on("slideChange", function () {
-      var dropProgress = $(this)[0].progress;
-      var progress = dropProgress * 100;
-      if (progress < 20) {
-        $(".bar-dynasty-desk").css("width", 20 + "%");
-        $(".ship-dynasty-desk").css("left", 10 + "%");
-      } else if (progress > 89) {
-        $(".bar-dynasty-desk").css("width", 100 + "%");
-        $(".ship-dynasty-desk").css("left", 90 + "%");
-      } else {
-        $(".bar-dynasty-desk").css("width", progress + "%");
-        $(".ship-dynasty-desk").css("left", progress - 10 + "%");
-      }
-    });
-  });
-
-  var SwiperModal = [];
-
-  $(".swiper-dynasty-mobile").each(function (index) {
-    var mySwiper = new Swiper($(this)[0], {
-      direction: "vertical",
-      slidesPerView: "auto",
-      mousewheel: true,
-      freeMode: true,
-      scrollbar: {
-        el: ".swiper-scrollbar",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        type: "progressbar",
-      },
-    });
-    SwiperModal.push(mySwiper);
-  });
-
-  $.each(SwiperModal, function (index, value) {
-    value.on("slideChange", function () {
-      var dropProgress = $(this)[0].progress;
-      var progress = dropProgress * 100;
-      if (progress < 20) {
-        $(".bar-dynasty").css("width", 20 + "%");
-        $(".ship-dynasty").css("left", 10 + "%");
-      } else if (progress > 89) {
-        $(".bar-dynasty").css("width", 100 + "%");
-        $(".ship-dynasty").css("left", 90 + "%");
-      } else {
-        $(".bar-dynasty").css("width", progress + "%");
-        $(".ship-dynasty").css("left", progress - 10 + "%");
-      }
-    });
-  });
-
   $(".description").each(function () {
     if ($(this).attr("data-bg")) {
       $(this).css({
@@ -411,37 +339,9 @@ $(document).ready(function () {
     }
   });
 
-  $(".modal").on("shown.bs.modal", function (e) {
-    $.each(SwiperModal, function (index, value) {
-      value.update();
-    });
-    $(".slider-for").slick("slickPrev");
-    $(".slider-nav").slick("slickPrev");
-  });
-
   setTimeout(function () {
     $(".name__family").first().trigger("click");
   }, 10);
-
-  //$(".name__family")[2].trigger("click");
-
-  $(".name__family").click(function () {
-    $(".name__family").removeClass("active");
-    $(this).addClass("active");
-    var data = $(this).attr("data-target");
-    $(".description").each(function (index, element) {
-      if (data == element.id) {
-        $(".description").css("display", "none");
-        $(`#${element.id}`).css("display", "block");
-        $.each(swiperDesk, function (index, value) {
-          value.update();
-          value.slideTo(1);
-        });
-        $(".slider-for").slick("slickPrev");
-        $(".slider-nav").slick("slickPrev");
-      }
-    });
-  });
 
   $("#theme-phone").mask("+7 (999)999-99-99");
 

@@ -31,6 +31,7 @@
         cursor: pointer;
         display: flex;
         align-items: center;
+        position: relative;
         & i {
           margin-left: 30px;
           color: #00b7c6;
@@ -61,13 +62,56 @@
         & .map__edu-city-content {
           display: block;
         }
+        & .title {
+          & .map__edu-item-button {
+            opacity: 1;
+            & .vertical {
+              transition: all 0.5s ease-in-out;
+              transform: rotate(90deg);
+            }
+            & .horizontal {
+              transition: all 0.5s ease-in-out;
+              transform: rotate(90deg);
+              opacity: 0;
+            }
+          }
+        }
       }
     }
   }
 }
 
+.map__edu-item-button {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 24px;
+  & .horizontal {
+    position: absolute;
+    background-color: #00b7c6;
+    width: 15px;
+    height: 4px;
+    margin-left: -15px;
+    margin-top: -9.5px;
+    transition: all 0.5s ease-in-out;
+    transform: rotate(-90deg);
+  }
+  & .vertical {
+    position: absolute;
+    background-color: #00b7c6;
+    width: 4px;
+    height: 15px;
+    margin-left: -9.5px;
+    margin-top: -15px;
+    transition: all 0.5s ease-in-out;
+    transform: rotate(-90deg);
+    opacity: 1;
+  }
+}
+
 .modal__univercity {
   & .modal-dialog {
+    margin: 0px auto;
     margin-top: 100px;
     width: 356px;
     & .modal-body {
