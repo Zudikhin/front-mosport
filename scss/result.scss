@@ -19,13 +19,15 @@
       font-size: 70px;
       line-height: 70px;
       text-align: center;
-      color: #f8f7f2;
+      color: #00b7c6;
     }
     & p {
       font-family: "Lato-Regular";
       font-size: 16px;
       line-height: 19px;
+      font-weight: 900;
       text-align: center;
+      text-transform: uppercase;
       color: #ffffff;
       @media (min-width: 768px) {
         width: 100%;

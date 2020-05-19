@@ -1,5 +1,15 @@
 .reviews {
   position: relative;
+  margin-bottom: 42px;
+  @media (min-width: 400px) {
+    margin-bottom: 25px;
+  }
+  @media (min-width: 576px) {
+    margin-bottom: 92px;
+  }
+  @media (min-width: 768px) {
+    margin-bottom: 0px;
+  }
   @media (min-width: 1200px) {
     margin-top: 100px;
   }
@@ -10,7 +20,7 @@
       height: 350px;
     }
     @media (min-width: 992px) {
-      height: 500px;
+      height: 400px;
     }
     @media (min-width: 1200px) {
       height: auto;
@@ -29,7 +39,7 @@
             padding: 20px 20px 75px 20px;
           }
           @media (min-width: 992px) {
-            padding: 100px 20px 60px 20px;
+            padding: 100px 20px 60px 40px;
           }
           @media (min-width: 1200px) {
             width: 60%;
@@ -77,13 +87,14 @@
           }
           @media (min-width: 768px) {
             height: 350px;
+            width: 352px;
           }
           @media (min-width: 992px) {
-            height: 500px;
+            height: 400px;
           }
           @media (min-width: 1200px) {
-            width: 40%;
-            height: auto;
+            width: 704px;
+            height: 494px;
           }
           & img {
             height: 100%;
@@ -105,20 +116,20 @@
       & img {
         width: 100%;
         height: 352px;
+        @media (min-width: 768px) {
+          width: 352px;
+        }
       }
     }
     @media (min-width: 768px) {
       display: block;
-    }
-    @media (min-width: 1200px) {
-      transform: translateY(-7px);
     }
   }
 }
 .reviews__btns-mobile {
   display: flex;
   position: absolute;
-  bottom: -20px;
+  bottom: -30px;
   z-index: 99;
   left: 20px;
   @media (min-width: 380px) {
@@ -138,71 +149,51 @@
     left: 380px;
   }
   @media (min-width: 992px) {
-    left: 520px;
     bottom: 50px;
   }
   @media (min-width: 1200px) {
-    left: 42%;
+    left: 44%;
   }
 }
 .review__btn-next {
-  width: 56px;
-  height: 14px;
+  width: 80px;
+  height: 30px;
+  margin-left: 10px;
+  @media (min-width: 992px) {
+    width: 128px;
+    height: 70px;
+  }
   & button {
     width: 100%;
     height: 100%;
-    background-color: transparent;
+    background: linear-gradient(180deg, #00b7c6 0%, #1d6098 100%);
+    border-radius: 4px;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
     border: none;
     & img {
-      width: 100%;
-      height: 100%;
-    }
-    &:first-child {
-      display: block;
-    }
-    &:last-child {
-      display: none;
-    }
-  }
-  &:hover {
-    & button {
-      &:first-child {
-        display: none;
-      }
-      &:last-child {
-        display: block;
-      }
+      width: 67px;
+      height: 14px;
     }
   }
 }
 
 .review__btn-prev {
-  width: 56px;
-  height: 14px;
+  width: 80px;
+  height: 30px;
+  @media (min-width: 992px) {
+    width: 128px;
+    height: 70px;
+  }
   & button {
     width: 100%;
     height: 100%;
-    background-color: transparent;
+    background: linear-gradient(180deg, #00b7c6 0%, #1d6098 100%);
+    border-radius: 4px;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
     border: none;
     & img {
-      width: 100%;
-      height: 100%;
-    }
-    &:first-child {
-      display: block;
-    }
-    &:last-child {
-      display: none;
-    }
-  }
-  &:hover {
-    & button {
-      &:first-child {
-        display: none;
-      }
-      &:last-child {
-        display: block;
-      }
+      width: 67px;
+      height: 14px;
     }
   }
 }

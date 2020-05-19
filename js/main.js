@@ -50,6 +50,50 @@ $(document).ready(function () {
     }
   });
 
+  $(".news-details__content-overflow").scroll(function (e) {
+    var winScroll = $("body").scrollTop() || $(this).scrollTop();
+    var height = $(this)[0].scrollHeight - $(this)[0].clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    if (scrolled < 20) {
+      $(".news-details__content-animation .progress .bar").css(
+        "width",
+        16 + "%"
+      );
+      $(".news-details__content-animation .ship .img").css("left", 12 + "%");
+    } else {
+      $(".news-details__content-animation .progress .bar").css(
+        "width",
+        scrolled + "%"
+      );
+      $(".news-details__content-animation .ship .img").css(
+        "left",
+        scrolled + "%"
+      );
+    }
+  });
+
+  $(".friends-about__content-overflow").scroll(function (e) {
+    var winScroll = $("body").scrollTop() || $(this).scrollTop();
+    var height = $(this)[0].scrollHeight - $(this)[0].clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    if (scrolled < 20) {
+      $(".friends-about__content-animation .progress .bar").css(
+        "width",
+        16 + "%"
+      );
+      $(".friends-about__content-animation .ship .img").css("left", 12 + "%");
+    } else {
+      $(".friends-about__content-animation .progress .bar").css(
+        "width",
+        scrolled + "%"
+      );
+      $(".friends-about__content-animation .ship .img").css(
+        "left",
+        scrolled + "%"
+      );
+    }
+  });
+
   $(".reviews__for_content").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -66,7 +110,7 @@ $(document).ready(function () {
     focusOnSelect: true,
     variableWidth: true,
     arrows: false,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 1500,
   });
 
@@ -122,13 +166,6 @@ $(document).ready(function () {
   $(".faq__item").click(function () {
     $(this).toggleClass("active");
   });
-
-  // $(".main__slider").onAfterChange:function (slide, index) {
-  //   if (index == 4) {
-  //     $$(".main__slider").slickPause();
-  //   }
-  // },
-  // onAfterChange:
 
   $(".header__fake-modal").click(function () {
     $(this).css("display", "none");
@@ -499,43 +536,5 @@ $(document).ready(function () {
 
   $(".contacts__item").click(function () {
     $(this).toggleClass("active");
-  });
-
-  // window.onscroll = function () {
-  //   myFunction();
-  // };
-
-  // function myFunction() {
-  //   var winScroll =
-  //     document.body.scrollTop || document.documentElement.scrollTop;
-  //   var height =
-  //     document.documentElement.scrollHeight -
-  //     document.documentElement.clientHeight;
-  //   var scrolled = (winScroll / height) * 100;
-  //   console.log(scrolled);
-
-  //   document.getElementById("myBar").style.width = scrolled + "%";
-  // }
-
-  $(".news-details__content-overflow").scroll(function (e) {
-    var winScroll = $("body").scrollTop() || $(this).scrollTop();
-    var height = $(this)[0].scrollHeight - $(this)[0].clientHeight;
-    var scrolled = (winScroll / height) * 100;
-    if (scrolled < 20) {
-      $(".news-details__content-animation .progress .bar").css(
-        "width",
-        16 + "%"
-      );
-      $(".news-details__content-animation .ship .img").css("left", 12 + "%");
-    } else {
-      $(".news-details__content-animation .progress .bar").css(
-        "width",
-        scrolled + "%"
-      );
-      $(".news-details__content-animation .ship .img").css(
-        "left",
-        scrolled + "%"
-      );
-    }
   });
 });

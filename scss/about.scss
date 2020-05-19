@@ -186,3 +186,56 @@
     }
   }
 }
+
+.orgkomitet {
+  background-color: #fafafa;
+  padding-bottom: 30px;
+  @media (min-width: 992px) {
+    padding-bottom: 60px;
+  }
+  &__title {
+    font-family: "Qanelas-SemiBold";
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 41px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-top: 30px;
+    text-align: center;
+    @media (min-width: 576px) {
+      text-align: left;
+    }
+    @media (min-width: 768px) {
+      font-size: 34px;
+      margin-top: 40px;
+    }
+  }
+  &__item {
+    cursor: pointer;
+    width: 239px;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  & .image {
+    width: 239px;
+    height: 239px;
+    & img {
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      border: 1px solid #ebebeb;
+    }
+  }
+  & h5 {
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+    font-family: "MullerMedium";
+    margin-top: 15px;
+  }
+}
+
+.orgkomitet-advice {
+  background-color: #ffffff;
+}
