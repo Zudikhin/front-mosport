@@ -29,9 +29,19 @@ $(document).ready(function () {
     }
   });
 
+  $(".map__edu_city .title").click(function () {
+    $(this).parent().toggleClass("active");
+  });
+
   $(".dropdown_item-desk").hover(function () {
     $(this).toggleClass("active");
     $(this).children().toggleClass("active");
+  });
+
+  $(".map__edu_content-desktop .map .item").click(function () {
+    var attrTarget = $(this).attr("data-target");
+    $(".window .item").removeClass("active");
+    $("#" + attrTarget).addClass("active");
   });
 
   $("body").click(function (e) {
@@ -94,6 +104,35 @@ $(document).ready(function () {
     }
   });
 
+  $(".educational__for").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: ".educational__nav",
+  });
+
+  $(".educational__nav").slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    asNavFor: ".educational__for",
+    dots: false,
+    centerMode: false,
+    arrows: false,
+    focusOnSelect: true,
+    infinite: true,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          arrows: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+
   $(".reviews__for_content").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -112,6 +151,14 @@ $(document).ready(function () {
     arrows: false,
     autoplay: false,
     autoplaySpeed: 1500,
+  });
+
+  $(".educational__slider-next").click(function () {
+    $(".educational__nav").slick("slickNext");
+  });
+
+  $(".educational__slider-prev").click(function () {
+    $(".educational__nav").slick("slickPrev");
   });
 
   $(".review__btn-next").click(function () {

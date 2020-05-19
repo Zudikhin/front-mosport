@@ -1,5 +1,8 @@
 .about {
   background-color: transparent;
+  @media (min-width: 992px) {
+    position: relative;
+  }
   &__main {
     position: absolute;
     left: 15%;
@@ -36,7 +39,7 @@
 
 .about__slider {
   margin-top: 17px;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
   @media (min-width: 576px) {
     margin-top: 30px;
   }
@@ -61,6 +64,8 @@
     }
     @media (min-width: 768px) {
       margin: 0px 10px;
+      width: 380px;
+      height: 380px;
     }
     @media (min-width: 992px) {
       &:hover {

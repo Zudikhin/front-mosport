@@ -1,0 +1,221 @@
+.map__edu {
+  background: linear-gradient(
+    180deg,
+    rgba(181, 181, 181, 0) 0%,
+    rgba(216, 216, 216, 0.5) 100%
+  );
+  padding-top: 30px;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+  @media (min-width: 992px) {
+    padding-top: 100px;
+  }
+  & .map__edu_content-mobile {
+    display: block;
+    @media (min-width: 992px) {
+      display: none;
+    }
+    & h3 {
+      font-family: "Qanelas-SemiBold";
+      font-size: 26px;
+      line-height: 34px;
+      text-transform: uppercase;
+      color: #1d6098;
+      @media (min-width: 768px) {
+        font-size: 36px;
+      }
+    }
+    & .map__edu_city {
+      margin-top: 20px;
+      & .title {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        & i {
+          margin-left: 30px;
+          color: #00b7c6;
+          font-size: 22px;
+          transform: translateY(-5px);
+        }
+      }
+      & .map__edu-city-content {
+        display: none;
+        & .item {
+          margin-top: 20px;
+          & button {
+            font-family: "Qanelas-SemiBold";
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 20px;
+            color: #1d6098;
+            text-align: left;
+            background-color: transparent;
+            border: none;
+            & span {
+              font-weight: 900;
+            }
+          }
+        }
+      }
+      &.active {
+        & .map__edu-city-content {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.modal__univercity {
+  & .modal-dialog {
+    margin-top: 100px;
+    width: 356px;
+    & .modal-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      & h3 {
+        font-size: 36px;
+        line-height: 42px;
+        color: #000000;
+        text-transform: none;
+      }
+      & p {
+        font-size: 18px;
+        line-height: 21px;
+        color: #000000;
+        margin-left: 20px;
+        margin-top: 10px;
+      }
+      & a {
+        width: 282px;
+        height: 50px;
+        font-size: 18px;
+        line-height: 50px;
+        text-align: center;
+        color: #ffffff;
+        background: linear-gradient(97.67deg, #00b7c6 0%, #1d6098 100%), #ffffff;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+.map__edu {
+  & .map__edu_content-desktop {
+    display: none;
+    width: 900px;
+    height: 510px;
+    background-size: cover;
+    position: relative;
+    background-image: url(../img/map-edu/map.png);
+    @media (min-width: 992px) {
+      display: block;
+    }
+    & .window {
+      position: absolute;
+      right: -180px;
+      bottom: 130px;
+      & .item {
+        background: #ffffff;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
+        width: 356px;
+        height: 408px;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 20px;
+        &.active {
+          display: flex;
+        }
+        & h3 {
+          font-size: 36px;
+          line-height: 42px;
+          color: #000000;
+          margin-top: 20px;
+        }
+        & p {
+          font-size: 18px;
+          line-height: 21px;
+          color: #000000;
+          margin-top: 14px;
+        }
+        & a {
+          width: 282px;
+          height: 50px;
+          font-size: 18px;
+          line-height: 50px;
+          text-align: center;
+          color: #ffffff;
+          background: linear-gradient(97.67deg, #00b7c6 0%, #1d6098 100%),
+            #ffffff;
+          border-radius: 4px;
+        }
+      }
+    }
+    & .map {
+      & .item {
+        position: absolute;
+        cursor: pointer;
+      }
+    }
+  }
+}
+[data-target="univer_one"] {
+  top: 35px;
+  left: 50px;
+}
+[data-target="univer_two"] {
+  left: 160px;
+  top: 90px;
+}
+[data-target="univer_three"] {
+  left: 180px;
+  top: 100px;
+}
+[data-target="univer_four"] {
+  left: 160px;
+  top: 135px;
+}
+[data-target="univer_five"] {
+  left: 200px;
+  top: 170px;
+}
+[data-target="univer_six"] {
+  left: 120px;
+  top: 230px;
+}
+[data-target="univer_seven"] {
+  left: 30px;
+  top: 260px;
+}
+[data-target="univer_eight"] {
+  left: -15px;
+  top: 230px;
+}
+[data-target="univer_nine"] {
+  left: 0px;
+  top: 250px;
+}
+[data-target="univer_ten"] {
+  left: 320px;
+  top: 320px;
+}
+[data-target="univer_eleven"] {
+  right: 100px;
+  bottom: 90px;
+}
+[data-target="univer_twelve"] {
+  right: 80px;
+  bottom: 60px;
+}
+[data-target="univer_thirteen"] {
+  right: 105px;
+  bottom: 40px;
+}
+[data-target="univer_fourteen"] {
+  right: 115px;
+  bottom: 20px;
+}
