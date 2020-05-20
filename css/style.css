@@ -2133,7 +2133,7 @@ figure {
 
 @media (min-width: 1200px) {
   .educational__for .item {
-    height: 900px;
+    height: 1200px;
   }
 }
 
@@ -2180,6 +2180,7 @@ figure {
     width: 670px;
     height: 300px;
     padding: 40px;
+    display: block !important;
   }
 }
 
@@ -7281,7 +7282,7 @@ figure {
 
 @media (min-width: 1200px) {
   .maritime_professions__for .item {
-    height: 900px;
+    height: 1200px;
   }
 }
 
@@ -7338,6 +7339,7 @@ figure {
   .maritime_professions__for .item .description {
     height: 200px;
     width: 672px;
+    display: block !important;
   }
 }
 

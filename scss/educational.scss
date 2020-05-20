@@ -79,7 +79,7 @@
       padding: 50px;
       background-size: 100% 100%;
       @media (min-width: 1200px) {
-        height: 900px;
+        height: 1200px;
       }
       @media (min-width: 768px) {
         display: flex;
@@ -101,6 +101,7 @@
           width: 670px;
           height: 300px;
           padding: 40px;
+          display: block !important;
         }
         & span {
           font-family: "MullerBold";
