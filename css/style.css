@@ -2057,7 +2057,7 @@ figure {
 }
 
 .educational__nav .item {
-  height: 300px;
+  height: 170px;
   background-size: 100% 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2068,11 +2068,12 @@ figure {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 @media (min-width: 576px) {
   .educational__nav .item {
-    height: 400px;
+    height: 250px;
   }
 }
 
@@ -2087,14 +2088,14 @@ figure {
 
 @media (min-width: 992px) {
   .educational__nav .item {
-    height: 200px;
+    height: 150px;
     padding: 0px 20px;
   }
 }
 
 @media (min-width: 1200px) {
   .educational__nav .item {
-    height: 200px;
+    height: 150px;
   }
 }
 
@@ -2139,7 +2140,7 @@ figure {
 
 @media (min-width: 1200px) {
   .educational__for .item {
-    height: 800px;
+    height: 500px;
   }
 }
 
@@ -7158,14 +7159,14 @@ figure {
 
 @media (min-width: 768px) {
   .maritime_professions__nav .item {
-    height: 250px;
+    height: 200px;
   }
 }
 
 @media (min-width: 992px) {
   .maritime_professions__nav .item {
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 200px;
   }
 }
 
@@ -7266,7 +7267,7 @@ figure {
 .maritime_professions__for .item {
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  height: 600px;
+  height: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7280,6 +7281,7 @@ figure {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 50px;
+  cursor: pointer;
 }
 
 @media (min-width: 992px) {
@@ -7299,7 +7301,7 @@ figure {
 
 @media (min-width: 1200px) {
   .maritime_professions__for .item {
-    height: 800px;
+    height: 500px;
   }
 }
 
@@ -7319,22 +7321,23 @@ figure {
 
 @media (min-width: 992px) {
   .maritime_professions__for .item .name {
-    height: 160px;
+    height: 100px;
+    width: 300px;
   }
 }
 
 .maritime_professions__for .item .name span {
   font-family: "Qanelas-SemiBold";
-  font-size: 36px;
-  line-height: 45px;
+  font-size: 26px;
+  line-height: 35px;
   text-transform: uppercase;
   color: #000000;
 }
 
 .maritime_professions__for .item .name img {
-  width: 124px;
-  height: 90px;
-  margin-left: 50px;
+  width: 84px;
+  height: 60px;
+  margin-left: 30px;
 }
 
 .maritime_professions__for .item .description {
@@ -7361,7 +7364,7 @@ figure {
 @media (min-width: 1200px) {
   .maritime_professions__for .item .description {
     height: 200px;
-    width: 672px;
+    width: 472px;
     display: block !important;
   }
 }

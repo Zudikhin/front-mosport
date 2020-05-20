@@ -58,11 +58,11 @@
       height: 400px;
     }
     @media (min-width: 768px) {
-      height: 250px;
+      height: 200px;
     }
     @media (min-width: 992px) {
-      width: 300px;
-      height: 300px;
+      width: 350px;
+      height: 200px;
     }
     &:after {
       content: "";
@@ -143,19 +143,20 @@
   & .item {
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    height: 600px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     justify-content: center;
     padding: 50px;
+    cursor: pointer;
     @media (min-width: 992px) {
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-end;
     }
     @media (min-width: 1200px) {
-      height: 800px;
+      height: 500px;
     }
     & .name {
       background-color: white;
@@ -165,19 +166,20 @@
       align-items: center;
       width: 400px;
       @media (min-width: 992px) {
-        height: 160px;
+        height: 100px;
+        width: 300px;
       }
       & span {
         font-family: "Qanelas-SemiBold";
-        font-size: 36px;
-        line-height: 45px;
+        font-size: 26px;
+        line-height: 35px;
         text-transform: uppercase;
         color: #000000;
       }
       & img {
-        width: 124px;
-        height: 90px;
-        margin-left: 50px;
+        width: 84px;
+        height: 60px;
+        margin-left: 30px;
       }
     }
     & .description {
@@ -194,7 +196,7 @@
       }
       @media (min-width: 1200px) {
         height: 200px;
-        width: 672px;
+        width: 472px;
         display: block !important;
       }
       & p {
