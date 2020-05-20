@@ -132,9 +132,12 @@
           width: 350px;
           height: 250px;
         }
+        @media (min-width: 576px) {
+          height: 350px;
+        }
         @media (min-width: 768px) {
           width: 100%;
-          height: 270px;
+          height: 350px;
         }
         &:before {
           content: "";
@@ -142,7 +145,6 @@
           top: 0;
           left: 0;
           background-size: cover;
-          background: url(../img/dynasty/right_content/canats.svg);
           width: 100%;
           height: 100%;
           background-size: 100% 100%;
@@ -175,12 +177,12 @@
       transform: rotate(270deg);
       width: 250px;
       right: -330px;
-      top: -180px;
+      top: -240px;
     }
     @media (min-width: 768px) {
       max-width: 180px;
       right: -350px;
-      top: -195px;
+      top: -240px;
     }
     & .item {
       & .img {
@@ -339,4 +341,76 @@
       }
     }
   }
+}
+
+.dynasty-mobile__content-overflow {
+  margin-top: 40px;
+  height: 200px;
+  overflow: auto;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  & p {
+    font-family: "MullerMedium";
+    font-size: 16px;
+    line-height: 16px;
+    color: #ffffff;
+    margin-top: 20px;
+  }
+}
+
+.dynasty-mobile__content-animation {
+  margin-top: 100px;
+  position: relative;
+  width: 80%;
+  & .ship {
+    width: 100%;
+    position: relative;
+    & .img {
+      position: absolute;
+      left: 12%;
+      bottom: 10px;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+      width: 70px;
+      height: 50px;
+      @media (min-width: 992px) {
+        width: 94px;
+        height: 70px;
+      }
+      & img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  & .progress {
+    position: relative;
+    width: 110%;
+    height: 2px;
+    background-color: #c1c1c1;
+    & .bar {
+      width: 16%;
+      height: 2px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: #1d6098;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+.dynasty-mobile__content-overflow-desk {
+  width: 450px;
+  height: 200px;
+  -webkit-transform: translateY(-120px);
+  transform: translateY(-120px);
+}
+
+.dynasty-mobile__content-animation-desk {
+  margin-top: 0px;
+  width: 60%;
 }

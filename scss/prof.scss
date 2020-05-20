@@ -32,3 +32,200 @@
     }
   }
 }
+
+.maritime_professions {
+  @media (min-width: 992px) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+.maritime_professions__nav {
+  margin-top: 20px;
+  @media (min-width: 1200px) {
+    margin-top: 50px;
+  }
+  & .item {
+    cursor: pointer;
+    width: 300px;
+    height: 300px;
+    margin: 0px 10px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    padding-bottom: 10px;
+    @media (min-width: 576px) {
+      height: 400px;
+    }
+    @media (min-width: 768px) {
+      height: 250px;
+    }
+    @media (min-width: 992px) {
+      width: 500px;
+      height: 300px;
+    }
+    &:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: -10px;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+      display: none;
+    }
+    &:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: #00b7c6;
+      position: absolute;
+      bottom: -10px;
+      left: -10px;
+      z-index: -1;
+      opacity: 1;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      opacity: 0;
+    }
+    &:hover {
+      @media (min-width: 768px) {
+        &::before {
+          opacity: 1;
+        }
+        &:after {
+          display: block;
+        }
+      }
+    }
+    & .img {
+      width: 100%;
+      height: 100%;
+      & img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    & .text {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 30px 20px;
+      & p {
+        font-family: "MullerRegular";
+        font-size: 18px;
+        line-height: 18px;
+        color: #ffffff;
+        width: 400px;
+      }
+      & span {
+        font-family: "MullerBold";
+        font-size: 14px;
+        line-height: 14px;
+        text-align: center;
+        text-decoration-line: underline;
+        color: #fafafa;
+      }
+    }
+  }
+}
+.maritime_professions__for {
+  margin-top: 30px;
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+  }
+  & .item {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: center;
+    padding: 50px;
+    @media (min-width: 992px) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    @media (min-width: 1200px) {
+      height: 900px;
+    }
+    & .name {
+      background-color: white;
+      box-sizing: border-box;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      width: 400px;
+      @media (min-width: 992px) {
+        height: 160px;
+      }
+      & span {
+        font-family: "Qanelas-SemiBold";
+        font-size: 36px;
+        line-height: 45px;
+        text-transform: uppercase;
+        color: #000000;
+      }
+      & img {
+        width: 124px;
+        height: 90px;
+        margin-left: 50px;
+      }
+    }
+    & .description {
+      background-color: white;
+      box-sizing: border-box;
+      padding: 20px;
+      margin-top: 50px;
+      @media (min-width: 992px) {
+        height: 240px;
+        margin-left: 20px;
+      }
+      @media (min-width: 1200px) {
+        height: 200px;
+        width: 672px;
+      }
+      & p {
+        font-family: "MullerUltraLight";
+        font-size: 18px;
+        line-height: 24px;
+        color: #000000;
+        margin: 10px 0px;
+        & span {
+          font-family: "Qanelas-SemiBold";
+          font-size: 18px;
+          line-height: 24px;
+          text-transform: uppercase;
+          color: #000000;
+        }
+      }
+    }
+  }
+}
+.maritime_professions-title {
+  display: flex;
+  justify-content: space-between;
+  & .btns {
+    margin-top: 4px;
+    & button {
+      border: none;
+      background-color: transparent;
+      & i {
+        color: #1d6098;
+      }
+      &:hover {
+        & i {
+          transform: scale(1.5);
+        }
+      }
+    }
+  }
+}

@@ -16,6 +16,54 @@ $(document).ready(function () {
     }
   });
 
+  $(".modal").on("shown.bs.modal", function (e) {
+    $(".slider-for").slick("slickGoTo", 1);
+  });
+
+  $(".dictionary__content .item").click(function () {
+    $(".dictionary__content .item").removeClass("active");
+    $(this).addClass("active");
+    var attrTarget = $(this).attr("data-target");
+    $(".dictionary__words .item").removeClass("active");
+    $("#" + attrTarget).addClass("active");
+  });
+
+  $(".name__family").click(function () {
+    $(".name__family").removeClass("active");
+    $(this).addClass("active");
+    var data = $(this).attr("data-target");
+    $(".description").each(function (index, element) {
+      if (data == element.id) {
+        $(".description").css("display", "none");
+        $(`#${element.id}`).css("display", "block");
+        $(".slider-for").slick("slickPrev");
+        $(".slider-nav").slick("slickPrev");
+      }
+    });
+  });
+
+  $(".dynasty-mobile__content-overflow").scroll(function (e) {
+    var winScroll = $("body").scrollTop() || $(this).scrollTop();
+    var height = $(this)[0].scrollHeight - $(this)[0].clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    if (scrolled < 20) {
+      $(".dynasty-mobile__content-animation .progress .bar").css(
+        "width",
+        16 + "%"
+      );
+      $(".dynasty-mobile__content-animation .ship .img").css("left", 12 + "%");
+    } else {
+      $(".dynasty-mobile__content-animation .progress .bar").css(
+        "width",
+        scrolled + "%"
+      );
+      $(".dynasty-mobile__content-animation .ship .img").css(
+        "left",
+        scrolled + "%"
+      );
+    }
+  });
+
   $(".about-main").each(function () {
     if ($(this).attr("data-bg")) {
       $(this).css({
@@ -80,6 +128,45 @@ $(document).ready(function () {
         scrolled + "%"
       );
     }
+  });
+
+  $(".maritime_professions__for").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: ".maritime_professions__nav",
+  });
+
+  $(".maritime_professions__nav").slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: ".maritime_professions__for",
+    dots: false,
+    centerMode: false,
+    arrows: false,
+    focusOnSelect: true,
+    infinite: true,
+    variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          arrows: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          variableWidth: false,
+        },
+      },
+    ],
+  });
+
+  $(".maritime_professions-prev").click(function () {
+    $(".maritime_professions__nav").slick("slickPrev");
+  });
+
+  $(".maritime_professions-next").click(function () {
+    $(".maritime_professions__nav").slick("slickNext");
   });
 
   $(".friends-about__content-overflow").scroll(function (e) {
@@ -301,9 +388,9 @@ $(document).ready(function () {
     if ($(this).attr("data-bg")) {
       $(this).css({
         background: "#00B7C6 url(" + $(this).data("bg") + ")",
-        "background-position": "right bottom",
+        "background-position": "250px 250px",
         "background-repeat": "no-repeat",
-        "background-size": "75% 60%",
+        "background-size": "100% 100%",
       });
     }
   });
@@ -313,7 +400,7 @@ $(document).ready(function () {
       if ($(this).attr("data-bg")) {
         $(this).css({
           background: "#00b7c6 url(" + $(this).data("bg") + ")",
-          "background-position": "100px bottom",
+          "background-position": "100px 500px",
           "background-repeat": "no-repeat",
           "background-size": "100% 40%",
         });
@@ -465,21 +552,21 @@ $(document).ready(function () {
     );
   });
 
-  var $window = $(window);
+  // var $window = $(window);
 
-  $window.scroll(function () {
-    var $video = $(".main__video video");
-    var $topOfVideo = $video.offset().top;
-    var $bottomOfVideo = $video.offset().top + $video.outerHeight();
+  // $window.scroll(function () {
+  //   var $video = $(".main__video video");
+  //   var $topOfVideo = $video.offset().top;
+  //   var $bottomOfVideo = $video.offset().top + $video.outerHeight();
 
-    var $topOfScreen = $window.scrollTop();
-    var $bottomOfScreen = $window.scrollTop() + $window.innerHeight();
-    if ($bottomOfScreen > $bottomOfVideo && $topOfScreen < $topOfVideo) {
-      $video[0].play();
-    } else {
-      $video[0].pause();
-    }
-  });
+  //   var $topOfScreen = $window.scrollTop();
+  //   var $bottomOfScreen = $window.scrollTop() + $window.innerHeight();
+  //   if ($bottomOfScreen > $bottomOfVideo && $topOfScreen < $topOfVideo) {
+  //     $video[0].play();
+  //   } else {
+  //     $video[0].pause();
+  //   }
+  // });
 
   $(".contacts__item").click(function () {
     $(this).toggleClass("active");
