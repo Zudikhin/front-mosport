@@ -1995,6 +1995,12 @@ figure {
   background-color: #ffffff;
 }
 
+@media (min-width: 1200px) {
+  .educational {
+    margin-top: 50px;
+  }
+}
+
 .educational .title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2088,7 +2094,7 @@ figure {
 
 @media (min-width: 1200px) {
   .educational__nav .item {
-    height: 300px;
+    height: 200px;
   }
 }
 
@@ -2133,7 +2139,7 @@ figure {
 
 @media (min-width: 1200px) {
   .educational__for .item {
-    height: 1200px;
+    height: 800px;
   }
 }
 
@@ -2167,6 +2173,12 @@ figure {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .educational__for .item .description {
+    display: block !important;
+  }
 }
 
 @media (min-width: 992px) {
@@ -2212,6 +2224,10 @@ figure {
           align-items: center;
 }
 
+.educational__for .item .name h4 {
+  font-size: 18px;
+}
+
 @media (min-width: 992px) {
   .educational__for .item .name {
     width: 300px;
@@ -2225,12 +2241,13 @@ figure {
 @media (min-width: 1200px) {
   .educational__for .item .name {
     width: 500px;
-    height: 160px;
+    height: 200px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding: 0px;
+    padding: 20px;
+    margin-left: 20px;
   }
 }
 
@@ -3692,7 +3709,7 @@ figure {
 
 @media (min-width: 992px) {
   .about-main {
-    height: 400px;
+    height: 500px;
   }
 }
 
@@ -7147,7 +7164,7 @@ figure {
 
 @media (min-width: 992px) {
   .maritime_professions__nav .item {
-    width: 500px;
+    width: 300px;
     height: 300px;
   }
 }
@@ -7282,7 +7299,7 @@ figure {
 
 @media (min-width: 1200px) {
   .maritime_professions__for .item {
-    height: 1200px;
+    height: 800px;
   }
 }
 
@@ -7326,6 +7343,12 @@ figure {
           box-sizing: border-box;
   padding: 20px;
   margin-top: 50px;
+}
+
+@media (min-width: 768px) {
+  .maritime_professions__for .item .description {
+    display: block !important;
+  }
 }
 
 @media (min-width: 992px) {
