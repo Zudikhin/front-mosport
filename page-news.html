@@ -332,10 +332,14 @@
                 <p>Будьте в кусре всех новостей</p>
               </div>
               <div class="form">
-                <form action="">
-                  <input type="email" placeholder="Введите e-mail" />
-                  <button type="submit">Подписаться</button>
-                </form>
+                <input type="email" placeholder="Введите e-mail" />
+                <button
+                  class="mailing__submit"
+                  data-toggle="modal"
+                  data-target="#modalMailing"
+                >
+                  Подписаться
+                </button>
               </div>
             </div>
           </div>
@@ -398,6 +402,32 @@
         </div>
       </div>
     </footer>
+
+    <div
+      class="modal fade mailing__modal"
+      id="modalMailing"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <p>
+            Подписка успешно оформлена
+          </p>
+        </div>
+      </div>
+    </div>
+
     <div class="header__fake-modal"></div>
 
     <script src="js/jquery-3.4.1.min.js"></script>

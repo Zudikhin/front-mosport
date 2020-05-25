@@ -17,7 +17,16 @@ $(document).ready(function () {
   });
 
   $(".modal").on("shown.bs.modal", function (e) {
-    $(".slider-for").slick("slickGoTo", 1);
+    $(".slider-for").slick("refresh");
+  });
+
+  $(".photoarchive__title-links button").click(function () {
+    $(".photoarchive__title-links button").removeClass("active");
+    $(this).addClass("active");
+    var attrTarget = $(this).attr("data-target");
+    $(".photoarchive__slider").removeClass("active");
+    $("#" + attrTarget).addClass("active");
+    $(".photoarchive-nav").slick("refresh");
   });
 
   $(".dictionary__content .item").click(function () {
@@ -36,8 +45,8 @@ $(document).ready(function () {
       if (data == element.id) {
         $(".description").css("display", "none");
         $(`#${element.id}`).css("display", "block");
-        $(".slider-for").slick("slickPrev");
-        $(".slider-nav").slick("slickPrev");
+        $(".slider-for").slick("refresh");
+        $(".slider-nav").slick("refresh");
       }
     });
   });
@@ -273,9 +282,9 @@ $(document).ready(function () {
     autoplaySpeed: 1500,
     pauseOnHover: false,
     pauseOnFocus: false,
-    speed: 1500,
+    speed: 2500,
     cssEase: "linear",
-    vertical: true,
+    vertical: false,
     dots: true,
     customPaging: function (slider, i) {
       return '<a class="dot"></a>';
@@ -414,6 +423,15 @@ $(document).ready(function () {
           "background-size": "100% 60%",
         });
       }
+    } else if ($(window).width() > 767 && $(window).width() <= 991) {
+      if ($(this).attr("data-bg")) {
+        $(this).css({
+          background: "#00b7c6 url(" + $(this).data("bg") + ")",
+          "background-position": "100px bottom",
+          "background-repeat": "no-repeat",
+          "background-size": "100% 70%",
+        });
+      }
     } else {
       if ($(this).attr("data-bg")) {
         $(this).css({
@@ -430,7 +448,7 @@ $(document).ready(function () {
     $(".name__family").first().trigger("click");
   }, 10);
 
-  $("#theme-phone").mask("+7 (999)999-99-99");
+  //$("#theme-phone").mask("+7 (999)999-99-99");
 
   $(".news-details__cat-ship .item").each(function () {
     if ($(this).attr("data-bg")) {
@@ -570,5 +588,25 @@ $(document).ready(function () {
 
   $(".contacts__item").click(function () {
     $(this).toggleClass("active");
+  });
+
+  //подписка на новости
+  $("#subscribe_form").submit(function (e) {
+    e.preventDefault();
+    var email = $(this).find("input[name=email]").val();
+    var form = $(this);
+    var url = "/local/templates/moyport/ajax/subscribe_actions.php";
+    $.post(
+      url,
+      { email: email },
+      function (data) {
+        if (data != -1) {
+          $("#modalMailing").modal("show");
+          form[0].reset();
+        }
+      },
+      "html"
+    );
+    return false;
   });
 });
