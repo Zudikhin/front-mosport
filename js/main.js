@@ -18,6 +18,7 @@ $(document).ready(function () {
 
   $(".modal").on("shown.bs.modal", function (e) {
     $(".slider-for").slick("refresh");
+    $(".slider-nav").slick("refresh");
   });
 
   $(".photoarchive__title-links button").click(function () {
