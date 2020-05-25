@@ -611,8 +611,8 @@ figure {
 }
 
 .header__mobile__btn {
-  position: absolute;
-  right: 35px;
+  position: relative;
+  right: 0px;
   top: 26px;
   background-color: inherit;
   border: none;
@@ -687,6 +687,7 @@ figure {
   -ms-flex-pack: center;
   justify-content: center;
   overflow: auto;
+  padding-top: 30px;
 }
 
 @media (min-width: 768px) {
