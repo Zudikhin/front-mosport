@@ -30,6 +30,10 @@ $(document).ready(function () {
     $(".photoarchive-nav").slick("refresh");
   });
 
+  $(".centre__list ul li button").click(function () {
+    $(this).parent().toggleClass("drop");
+  });
+
   $(".dictionary__content .item").click(function () {
     $(".dictionary__content .item").removeClass("active");
     $(this).addClass("active");
